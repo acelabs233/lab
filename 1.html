@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<style>
+    *{
+
+        font-size: large;
+    }
+
+
+</style>
+
+<script>
+    function makeReadable(){
+        var v = document.getElementById("box1");
+        if(v.checked){
+            document.getElementById("text1").readOnly = true;
+        }else{
+            document.getElementById("text1").readOnly = false;
+        }
+    }
+
+</script>
+
+<html>
+    <div class = "container">
+        <input type="checkbox" id="box1" onclick="makeReadable()" >
+        <input type="text" id="text1" value ="coke" ><br>
+    </div>
+
+
+</html>

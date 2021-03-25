@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<style>
+    *{
+
+        font-size: large;
+    }
+
+
+</style>
+
+<script>
+    function display(){
+        var v = document.getElementsByTagName("input");
+        var out = document.getElementById("result");
+        out.innerHTML = "";
+        for (let i = 0; i < v.length-1; i++){
+            if(v[i].checked){
+                out.innerHTML += " " + v[i].value;
+            }
+        }
+    }
+
+</script>
+
+<html>
+    <div class = "container">
+        Drinks:<br>
+        <input type="checkbox" name="gr1" value="coke">Coke<br>
+        <input type="checkbox" name="gr1" value="sprite">Sprite<br>
+        <input type="checkbox" name="gr1" value="pepsi">Pepsi<br>
+        <input type="checkbox" name="gr1" value="fanta">Fanta<br>
+        <br><br>
+        Food:<br>
+        <input type="checkbox" name="gr2" value="chicken">Chicken<br>
+        <input type="checkbox" name="gr2" value="duck">Duck<br>
+        <input type="checkbox" name="gr2" value="beef">Beef<br>
+        <input type="checkbox" name="gr2" value="poke">Poke<br>
+        <hr>
+        <input type="button" onclick="display()" value="CLICK">
+        <br>
+        <label id="result"></label>
+    </div>
+
+
+</html>
