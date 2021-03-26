@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <form>
+    <p>The size will display in bytes, kbs, mbs, and gbs if larger than 1024 in their display size, 
+       size will shows only in gbs if file is larger than 1024 gbs. 
+    </p><br>
+    <input type="file" multiple id="files">
+    <output id="list"></output>
+    <script>
+        function sizeConverter(size){
+            ls = ["bytes", "kbs", "mbs", "gbs"];
+            idx = 0;
+            while(size > 1024 && idx < ls.length-1){
+                size /= 1024;
+                idx += 1;
+            }
+
+            return size.toFixed(2).toString() + " " + ls[idx]
+        }
+
+
+        function handleFileSelected(evt){
+            var files = evt.target.files;
+            var output = [];
+            for (let i = 0; i < files.length; i++) {
+                f = files[i]
+                output.push(`<li><strong>`, f.name, `</strong>(`, f.type || 'n//a',')-', sizeConverter(f.size) , ', last modified:',
+                    f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n//a', '</li>');
+            }
+            document.getElementById('list').innerHTML = '<ul>'+output.join(' ')+'</ul>';
+        }
+        document.getElementById("files").addEventListener('change', handleFileSelected, false)
+    </script>
+  </form>
+</body>
+</html>
