@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #upload-file{
+                display: block;
+                height: 50px;
+                width: 30%;
+                background-color: bisque;
+                text-align: center;
+                padding-top: 10px;
+                margin: auto;
+            }
+            #display{
+                display: block;
+                border-style: solid;
+                margin-top: 30px;
+                margin-left: auto;
+                margin-right: auto;
+                width: 600px;
+                height: 400px;
+            }
+        </style>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    </head>
+    <body>
+        
+        <input type="file" id="hide-input" style="display: none;">
+        <label id="upload-file">Upload File</label>
+        <div id ="display"></div>
+
+        <script>
+            var fileDiv = document.getElementById("upload-file");
+            var fileInput = document.getElementById("hide-input");
+            fileInput.addEventListener("change", function (e) {
+                var files = this.files
+                showThumbnail(files)
+            }, false)
+
+            fileDiv.addEventListener("click", function (e) {
+                $(fileInput).click();
+                e.preventDefault();
+            }, false)
+
+            fileDiv.addEventListener("dragenter", function (e) {
+                e.stopPropagation();
+                e.preventDefault();
+            }, false);
+
+            fileDiv.addEventListener("dragover", function (e) {
+                e.stopPropagation();
+                e.preventDefault();
+            }, false);
+
+            fileDiv.addEventListener("drop", function (e) {
+                e.stopPropagation();
+                e.preventDefault();
+
+                var dt = e.dataTransfer;
+                var files = dt.files;
+
+                showThumbnail(files)
+            }, false);
+
+
+            function isImage(file){
+                var imageType = /image.*/
+                if (!file.type.match(imageType)) {
+                    return false;
+                }
+                return true;
+            }
+
+            
+
+            function showThumbnail(files) {
+                var file = files[0]
+                
+                if(isImage(file)){
+                    var image = document.createElement("img");
+                    var display = document.getElementById("display");
+                    image.file = file;
+                    while(display.firstChild){
+                        display.removeChild(display.firstChild);
+                    }
+                    display.appendChild(image)
+
+                    var reader = new FileReader()
+                    reader.onload = (function (aImg, display) {
+                        return function (e) {
+                            aImg.width = 600;
+                            aImg.height= 400;
+                            aImg.src = e.target.result;
+                        };
+                    }(image, display))
+                    
+                    var ret = reader.readAsDataURL(file);
+                    var canvas = document.createElement("canvas");
+                }
+            }
+
+        </script>
+    </body>
+</html>
