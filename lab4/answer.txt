@@ -1,0 +1,25 @@
+1.  5 block-level and inline HTML elements
+
+block: 
+<p>
+<article>
+<div>
+<form>
+<hr>
+
+inline:
+<span>
+<a>
+<br>
+<img>
+<strong>
+
+
+2. semantic and non semantic elements
+the semantic tag is something provide meaning by default
+such as <article>
+non semantic does not define its purpose. The is <div> is one of the example.
+
+4. no <!DOCTYPE html>:
+  will fall into quirks mode
+  CSS class and id names will become case insensitive.
