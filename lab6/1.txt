@@ -1,0 +1,379 @@
+01. Does localStorage throw error after reaches maximum limits?  
+
+    yes, it will has a "localStorage is full" error message.
+
+
+02. What are the new form elements in HTML5?  
+
+    datalist: list pre-defined options
+    output: use to perform calculation
+    keygen: Deprecated
+    progress: display the progress 
+    meter: display measurement 
+
+
+03. What is the DOM? How does the DOM work?  
+
+    Document Object Model. it is constructed as a tree object.
+
+04. How does the browser rendering engine work?
+
+    the browser will parse html chunks into DOM tree along with styleing in external or internal css files.
+    Once the parsing stage is done, it will drawing those element with pre-defined styles. 
+
+05. What does a <DOCTYPE html> do?  
+
+    document type declation, tell the browser this is html document.
+
+06. What happens when DOCTYPE is not given?
+
+    If we don't do this, browser will run in quirks mode.
+
+07. What is the difference between standards mode and quirks mode? 
+
+    will have some pre-defined quirks rules, also css class name and id will be case sensitive.
+
+08. What is difference between HTML and XHTML?  
+
+    xhtml is EXtensible HyperText Markup Language which is XML-based version of HTML.
+    xhtml make html more flexible to work and has much stricter error handling.
+
+09. What are the building blocks of HTML5?
+
+    more semantic text markup
+    new form elements
+    has vedio and audio tag
+    new javascript API
+    canvas and SVG
+    new communication API
+    geolocation API
+    web worker API
+    new data storage
+
+10. Describe the difference between a cookie, sessionStorage and localStorage?  
+
+    cookie: key/value pair for server Side.
+    localStorage: persistant key/value pair for client Side.
+    sessionStorage:  non persistent and scoped only to the current window.
+
+11. What is Critical Rendering Path?  
+    
+    the sequence of steps the browser goes through to convert the HTML, CSS, and JavaScript into pixels.
+
+12. What are the Benefits of Server Side Rendering (SSR) Over Client Side Rendering (CSR)?  
+
+    SSR provide performance benefit, and consistent SEO performance.
+
+13. What is the difference between a <span> and a <div>?  
+
+    <span> is inline level and <div> is block level
+
+14. Name 5 common block-level and inline HTML elements? 
+
+    block:
+
+    <div> <video> <article> <form> <hr>
+
+    inline:
+    <span> <a> <br> <img> <strong>
+
+15. What are semantic and non-semantic elements?  
+
+    semantic elements usually provide a purpose and meaning for programmer and non-semantic does not do it.
+    Such as <article> is semantic and <div> is non-semantic
+
+16. What is the purpose of main element?  
+
+    represent the main content section of application or body section.
+
+17. Define semantic markup. What are the semantic meanings for <section>, <article>, <aside>,  <nav>, <header>, <footer> and when/how should each be used in structuring html markup?  
+
+    <section>
+    you should use it when you have some topic is in same section
+
+    <article>
+    the usage of this tag is define by its name. you should use it when you want to specific a independent topic.
+
+    <aside>
+    usually used in defining some content aside from the content.
+    it often placed as a side bar.
+
+    <nav>
+    used for page navigatiion
+
+    <header>
+    on top of a web page, usually used to show some common topic or navigatiion through the whole website.
+
+    <footer>
+    used on bottom of a web page, usually used to show authorship, copyright, or related document. 
+
+
+18. When should you use section, div or article?  
+
+    use <div> if the content is not semantic related. 
+    use <article> if the content is independent with other.
+    use <section> if there are mutiple content but is related in same topic.
+
+19. What is Character Encoding?  
+
+    convent Character into another form using an encoding system.
+    such as convert ascii to utf-8.
+
+20. What is the purpose of meta tags?
+
+    meta tag is used to provide information about data in web.
+    For example, meta data can be used to define charset, content, name, and http-equiv
+
+21. What does async and defer refer in script tag? Describe the difference between <script>, <script  async> and <script defer>  
+
+    <script> the script will be fetched and excuted immeddiatly before the browser continues parsing the whole page
+    <script async> allow excuting scripts asynchronously
+    <script defer> only excuting scripts after document has been parsed.
+
+22. Can you describe the difference between progressive enhancement and graceful degradation?  
+    progressive enhancement: provide basic founctionality first, then add more features if browser compatible with it.
+
+    graceful degradation: provide full founctionality first, remove any non-compatible features afterward.
+
+23. What is the purpose of cache busting and how can you achieve it?  
+
+    the cache busting allow user visit most updated version content without clear cache.
+    we can use versionning file name, file path, or query string to achieve it.
+
+24. Name 3 ways to decrease page load?  
+    minimize image's size
+    minimize and combine javascript files
+    minimize and combine css files
+
+25. What ARIA and screenreaders are, and how to make a website accessible?  
+
+    ARIA stands Accessible Rich Internet Applications.
+    ARIA and screenreaders are used for disability community. 
+
+    to make website accessible:
+    use CMS that support accessibility.
+    organize the structure of website, give image meaningful alternative name.
+    make link readable.
+
+
+26. What is the purpose of the alt attribute on images?  
+
+    two usage:
+    if image is not available, it will display alt information.
+    it can be used for accessibility for disability community.
+
+27. Explain some of the pros and cons for CSS animations versus JavaScript animations?  
+
+    pros:
+    css animation is simple 
+    easy to implenment 
+    have good performance
+
+    cons:
+    you don't have full control with the animation
+    cannot achieve complex animation with only css
+
+28. What does CORS stand for and what issue does it address? 
+    cors stands for Cross-Origin Resource Sharing.
+    it is used to allow browser request XMLhttprequest from other Origin.
+    it is used to resolve the problem where ajax only allowed same-origin.
+
+
+29. Ways to improve website performance
+    use right format images.
+    minimize css and javascript document.
+    use css sprites to reduce http request.
+    use server-side Compression
+
+30. Comparison of browsers engines like Chrome, Firefox, Internet explorer, Safari?  
+
+    those four browser use difference browser engines. 
+    IE: has more bug and low compatibility.
+    Safari: fast but lack customizations 
+    Firefox: more secure and ease of use
+    Chrome: most powerful browsers, sometimes have ram usage issue.
+
+31. What does the lang attribute in html do?  
+
+    specifies the natural language of the content of a web page.
+
+32. What is desktop first and mobile first design approach?  
+
+    desktop first is design web main satisfiy views and interactives in desktop computer.
+    mobile first is design web main make small/touch screen more friendly.  
+
+33. What are data- attributes good for?  
+
+    allow us to store extra information on standard, 
+    semantic HTML elements without other hacks such as non-standard attributes, 
+    extra properties on DOM
+
+34. Explain the difference between layout, painting and compositing?  
+
+    layout, painting, compositing is the steps in rendering web page.
+
+    layout used to calculation the space each element need it.
+
+    painting is used to filling pixels such as drawing text, colors, and images.
+
+    compositing compbine two or more grpgic into one. This is used to deal when the
+    webpage have mutiple layout and they are overlap each other.
+
+35. Explain about HTML Canvas?  
+
+    the html canvas is used to draw graphics via javascript.
+
+36. Explain about HTML Layout Engines used by browsers?  
+
+    layout engine is a core software component of web browser.primary job of a browser engine is to transform HTML documents 
+    and other resources of a web page into an interactive visual representation on a user's device
+
+37. What are the semantic tags available in html5?  
+
+    <article>
+    <aside>
+    <details>
+    <figcaption>
+    <figure>
+    <footer>
+    <header>
+    <main>
+    <mark>
+    <nav>
+    <section>
+    <summary>
+    <time>
+    <progress>
+    <meter>
+
+38. Why you would like to use semantic tag?  
+
+    it provide meaning by the tag. It make webpage more readable.
+
+39. How to make page responsive?  
+    use percentage value, flex-blox that make a web page automaticlly fit for all device.
+
+40. What is difference between span tag and div tag?
+
+    <span> is inline level and <div> is block level
+
+
+41. What are optional closing tag?  
+    for some element in HTML5, it is not required to use a closing tag.
+    for example, <li> and <option> can be used without closing tag. 
+
+42. What is a self closing tag?  
+
+    the tag have its own meaning without open tag.
+    such as <img /> and <link />
+
+43. Does the following trigger http request at the time of page load?  
+    lack of information.
+
+44. How Geo-location API works in html5?
+    HTML5 geolocation detects latitude and longitude coordinates
+    by using the device's GPS (if available on the device) or the device's mobile/WIFI signal if GPS
+    is not available in this device.
+
+45. What is difference between SVG and Canvas?
+    SVG gives better performance with smaller number of objects or larger surface. 
+    Canvas gives better performance with smaller surface or larger number of objects
+
+    SVG is vector based and composed of shapes.
+    Canvas is raster based and composed of pixel
+
+46. Explain Drag and Drop in HTML5?  
+    to make a item dragable:
+    we have to use draggable attribute and preventDefault behaivor on ondragstart
+    then we need to use ondrop and ondragover to make a place allow to drop an object.
+    when we drop a object, we have to transfer object into text then append to the target.
+
+
+47. Why to use IndexedDB instead of WebSQL in HTML5?  
+    WebSQl only support chrom and Safari, 
+    IndexedDB is the successor to both localStorage and websql which 
+    have more compatibility.
+
+48. Explain Application Cache in HTML5. OR What is a manifest file in HTML?  
+    we use manifest feature to make user navigat a site even offline.
+    it is been deprecated. 
+
+49. Explain Microdata in HTML5?  
+    microdata is a standardized way to provide additional semantics in your web pages.
+    it has five global attribute:
+    
+    itemscope
+    itemtype
+    itemid
+    itemprop
+    itemref
+
+50. List the API available in HTML5?  
+    Ambient Light
+    Battery Status
+    Drag and Drop
+    Geolocation
+    Gamepad
+    Forms
+    Canvas 2D Context
+    Clipboard
+    Contacts
+    Fullscreen
+    History
+    Microdata
+    Indexed database
+    User Timing
+    Vibration
+    Web Audio
+    Web Speech
+    Web storage
+    Web sockets
+    Web Workers
+    XMLHttpRequest2
+
+51. What are different new form element types provided by HTML5?  
+    datalist: list pre-defined options
+    output: use to perform calculation
+    keygen: Deprecated
+    progress: display the progress 
+    meter: display measurement 
+
+52. What are the HTML tags which deprecated in HTML5?  
+    applet
+    basefont
+    center
+    dir
+    embed
+    font
+    isindex
+    listing
+    menu 
+    plaintext
+    s 
+    strike 
+    u 
+    xmp 
+
+
+53. How you can Use Modernizr in HTML5?  
+    Modernizr is a library detects browser support feature for html and css3
+    you have to download it and excuted it using script tag
+
+54. What is the use of WebSocket API?  
+    The WebSocket API is an advanced technology that makes it possible to open 
+    a two-way interactive communication session between the user's browser and a server.
+    
+
+55. What does enctype='multipart/form-data' mean?  
+    enctype tell server how the data is being encoded.
+    multipart/form-data s one of the value of enctype attribute, which is used in form element that have a file upload. 
+    multi-part means form data divides into multiple parts and send to server.
+
+56. What is progressive rendering?
+ 
+ is the technique of sequentially rendering portions of a webpage in the server and 
+ streaming it to the client in parts without waiting for the whole page to rendered
+
+57. What is difference between Select and Datalist?  
+    Select required user to choose one from list,
+    datalist suggest user to choose but is not required.
