@@ -1,0 +1,44 @@
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    height: 400px;
+}
+
+.flex-item{
+    align-items:center;
+}
+
+.flex-content{
+    align-content: center;
+}
+
+.flex-justify{
+    justify-content: center;
+}
+
+.item{
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    text-align: center;
+    box-sizing:border-box;
+    padding-top: 30px;
+}
+
+.item1{
+    background-color: aliceblue;
+    height: 200px;
+}
+.item2{
+    background-color: antiquewhite;
+}
+.item3{
+    background-color: aqua;
+    height: 200px;
+}
+.item4{
+    background-color: aquamarine;
+}
+.item5{
+    background-color: bisque;
+}
