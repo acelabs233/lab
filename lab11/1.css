@@ -1,0 +1,58 @@
+*{
+    border-radius: 5rem;
+}
+
+html,body{
+    margin:0;
+}
+body{
+    font-size: 24px;
+    color:white;
+    min-height:100vh;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column
+}
+.flex-header{
+    background-color: #5070B5;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+.flex-main{
+    display: flex;
+    flex:1;
+}
+
+.flex-nav{
+    background-color: orangered;
+    border-radius: 0.5rem;
+    padding-top: 3rem;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    flex:1;
+}
+
+.flex-article{
+    background-color: plum;
+    padding-top: 3rem;
+    flex:6; 
+}
+
+.flex-aside{
+    background-color:orange;
+    border-radius: 0.5rem;
+    padding-top: 3rem;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    flex:1;
+}
+
+
+.flex-footer{
+    background-color:blue;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}

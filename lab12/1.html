@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        </head>
+
+        <style>
+            a:active{
+                color: red;
+            }
+            .q3 p::after{
+                content: " ---this is after content";
+            }
+            .q3 p::before{
+                content: "this is before content----";
+            }
+            .q6 p:first-child {
+                color: red;
+            }
+            .q7 p::first-letter{
+                background-color: red;
+            }
+            .q8 p::first-line{
+                color: red;
+            }
+            .q9 p:hover{
+                color: red;
+            }
+
+            .q10 p:focus{
+                background-color: red;
+            }
+
+            .q11 p:nth-child(3){
+                background-color: red;
+            }
+            .q12 p:nth-last-child(3){
+                background-color: red;
+            }
+            .q13 p:nth-last-of-type(3){
+                background-color: red;
+            }
+            input:required{
+                background-color: red;
+            }
+            .q14 p:nth-child(even){
+                color: red;
+            }
+        </style>
+        <body>
+            <ul>
+                <li>
+                    <h1>q1</h1>
+                        <p>Use target="_blank" to open in new window</p>
+                        <a href="https://www.google.com/" target="_blank">google</a>
+                </li>
+                <li>
+                    <h1>q2</h1>
+                        I tried onbeforeunload, but this event listenr does not work..
+                </li>
+                <li>
+                    <h1>q3</h1>
+                    <p>make link change color when active</p>
+                    <a href="" class="link1" >click this link to make it red</a>
+                </li>
+                <li>
+                    <h1>q4 and q5</h1>
+                    <div class="q3">
+                        <p>before me and after me</p>
+                    </div>
+                </li>
+                <li>
+                    <h1>q6</h1>
+                    <div class="q6">
+                        <p class="first">first kid</p>
+                        <p class="second">second kid</p>
+                    </div>
+                </li>
+                <li>
+                    <h1>q7</h1>
+                    <div class="q7">
+                        <p class="first">first kid</p>
+                    </div>
+                </li>
+                <li>
+                    <h1>q8</h1>
+                    <div class="q8">
+                        <p class="first">first line<br>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </li>
+                <li>
+                    <h1>q9</h1>
+                    <div class="q9">
+                        <p class="first">hove me</p>
+                    </div>
+                </li>
+                <li>
+                    <h1>q10</h1>
+                    <div class="q10">
+                        <p class="first" tabindex="0">click me to focus</p>
+                    </div>
+                </li>
+                <h1>3th child with n-th child </h1>
+                <li class="q11">
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </li>
+                <h1>3th child from last one </h1>
+                <li class="q12">
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </li>
+
+                <h1>3th type</h1>
+                <li class="q13">
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <div>This is not p tag.</div>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </li>
+                <h1>required</h1>
+                <p>required will change to red</p>
+                <input type="text" id="username" name="username" required>
+                <p>not required below</p>
+                <input type="text" id="username" name="username" >
+
+                <h1>even child show red</h1>
+                <li class="q14">
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </li>
+                <h1>
+                    last question:
+                    Difference between CSS Psudo Elements and Psudo Classes
+                </h1>
+                  <strong> A pseudo-element is a ‘fake’ element, it isn’t really in the document with the ‘real’ ones. 
+                    Pseudo-classes are like ‘fake’ classes that are applied to elements under certain conditions
+                    for example: with ":" is Pseudo-classes and with "::" is pseudo-element</strong>
+            </ul>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </body>
+
+</html>
+<script>
+</script>
