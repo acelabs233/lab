@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        </head>
+        <style>
+            #submit{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100vw;
+                padding-bottom: 40px;
+            }
+            #error{
+                font-weight: 900;
+                color: red;
+            }
+            textarea, input{
+                width: 600px;
+                max-width: 97%;
+                border-width: 2px;
+            }
+            input{
+                height: 40px;
+            }
+            textarea{
+                height: 200px;
+            }
+            body{
+                margin: 0;
+                overflow-x: hidden;
+            }
+            button{
+                margin-top: 10px;
+                width: 600px;
+                max-width: 100%;
+                height: 30px;
+                background-color: gray;
+            }
+
+            .post{
+                border-top: 1px;
+                border-style:solid;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .post p:first-child{
+                border-bottom: 2px solid;
+            }
+            .post button{
+                width: 100%;
+            }
+            .header{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .header *{
+                margin: 4px;
+            }
+        </style>
+        <body>
+            <div class="header">
+                <h2>Guanqing's TODO-List</h2><button onclick="clearAll()">clear all</button>
+            </div>
+            <hr>
+            <div id="posts">
+            </div>
+
+            <hr>
+            <div id="submit">
+                <h3>Title:</h3>
+                 <input id="title"  type="text"><br>
+                <h3>Content</h3>
+                <textarea id="content" ></textarea>
+                <button onclick="submit()" >Submit</button>
+                <div id="error"></div>
+            </div>
+
+        </body>
+        <script defer>
+            function display(){
+                let id = document.getElementById('posts');
+                let keys = Object.keys(window.localStorage);
+                id.innerHTML = "";
+                for(let key of keys){
+                    let val = window.localStorage.getItem(key);
+                    let ct = `
+                        <div class="post" >
+                            <p>${key}</p>
+                            <p>${val}</p>
+                            <button onclick="remove(this)" value="${key}" >Delete</button>
+                        </div>`;
+                    id.innerHTML += ct;
+                }
+
+
+            }
+            display();
+
+            function submit(){
+                let id = document.getElementById('title');
+                let ct = document.getElementById('content');
+                let e = document.getElementById('error');
+                if(window.localStorage.getItem(id.value) != undefined || id.value.replace(/\s/g, '') == ''){
+                    e.innerText = "Content exits or title is empty\n";
+                }else{
+                    e.innerText="";
+                    window.localStorage.setItem(id.value, ct.value);
+                    console.log("stored" + id.value + " " + ct.value);
+                    id.value="";
+                    ct.value="";
+                }
+                display();
+            }
+
+            function clearAll(){
+                console.log("wt");
+                window.localStorage.clear();
+                display();
+            }
+
+            function remove(ele){
+                window.localStorage.removeItem(ele.value);
+                display();
+            }
+        </script>
+</html>

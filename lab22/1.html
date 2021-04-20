@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="app">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.js" ></script>
+            <script src="1.js"></script>
+        </head>
+        <body ng-controller="emp">
+            <!-- a = <input ng-model='a' ng-change="updateC()"> -->
+            <!-- a = <input ng-model="o.a">
+            b = <input ng-model="o.b">
+            c = <input ng-model="o.c"> -->
+            <!-- <div> a = {{ a }} </div> 
+            <div> b = {{ b }} </div>
+            <div> c = {{ c }} </div> -->
+
+            <div ng-repeat="i in emps">
+                <div>{{i.empno}} -- {{i.ename}}</div>
+            </div>
+            <button ng-click='addEmp()' >add</button>
+            <button ng-click='modify3rdEmp()' >add1</button>
+        </body>
+</html>

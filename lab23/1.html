@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="app">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.js" ></script>
+            <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+            <script src="1.js"></script>
+        </head>
+        <body ng-controller="emp" id="div1">
+            a = <input ng-model="a">
+            <div> a = {{ a }}</div>
+            <hr>
+            b = <input ng-model="b">
+            <div> b = {{ b }}</div>
+            <hr>
+            c = <input ng-model="c">
+            <div> c = {{ c }}</div>
+            <hr>
+
+            <button ng-click="calcSum()">Calc Sum</button>
+            <button onclick="btnClick()">sum</button>
+            <div>Sum = {{ s }}</div>
+        </body>
+</html>
