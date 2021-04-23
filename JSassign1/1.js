@@ -57,3 +57,52 @@ let numToArray = num => [...`${num}`].map(x => parseInt(x));
 
 console.log(numToArray(123));
 
+
+// problem 8
+let filter = function(list, vals){
+    var set = new Set(vals);
+    return list.reduce((acc, cur)=>{
+        if(!set.has(cur)){
+            acc.push(cur);
+        }
+        return acc;
+    },[]);
+}
+
+let ls = [0,1,2,2,3,3,4,5,6,7,8];
+console.log(filter(ls, [2,3]));
+
+//problem 9
+let powerset = arr =>{
+    return arr.reduce((acc, cur)=>{
+        return acc.concat( acc.map( r=> r.concat([cur])  ) );
+    },[[]])   ;
+}
+
+console.log(powerset([1,2,3]))
+
+
+//problem 10
+let findValues = (arr, vals)=>{
+    let set = new Set(vals);
+    let res = [];
+    for(let i = 0; i < arr.length; i++){
+        if(set.has(i)){
+            res.push(arr[i]);
+        }
+    }
+    return res;
+}
+
+console.log(findValues(['a','b','c','d','e'], [0,2,3]));
+
+
+//problem 11
+let removeBadchar = (str) => {
+    if(str == null || str == ' ') return str;
+    str = str.toString();
+    return str.replace(/[^\x20-\x7e]/g,'');
+}
+
+console.log(removeBadchar('äÄçÇéÉêPHP-MySQLöÖÐþúÚ'));
+
