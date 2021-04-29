@@ -1,0 +1,21 @@
+POST http://localhost:9999/login
+Content-Type: application/json
+
+{
+    "username":"John"
+}
+
+###
+
+GET http://localhost:8888/posts
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSm9obiIsImlhdCI6MTYxOTcxMDMxNCwiZXhwIjoxNjE5NzEwMzM5fQ.qi-zUKcNd0zlM7XcXnVWRDkqv3TIZix0aR8FcrfYsxY
+
+
+###
+
+POST http://localhost:9999/token
+Content-Type: application/json
+
+{
+    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSm9obiIsImlhdCI6MTYxOTcxMDEzOH0.2pfWrlWehZq-qp674hug3v4hm7kqf9ByrSPuGLQOZBw"
+}
