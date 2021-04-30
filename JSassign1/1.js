@@ -1,3 +1,5 @@
+
+
 // problem 1 
 function same(a , b){
     return Object.keys(b).every(key => key in a && b[key] === a[key])
@@ -96,8 +98,27 @@ let findValues = (arr, vals)=>{
 
 console.log(findValues(['a','b','c','d','e'], [0,2,3]));
 
+//problem
+let randomColor = ()=>{
 
-//problem 11
+    let ls = ['0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'];
+    let color ='#';
+    for(let i = 0; i < 6; i++){
+        let idx = Math.floor(Math.random() * 14);
+        color += ls[idx];
+    } 
+    return color;
+}
+
+const random_hex_color_code = () => {
+    let n = (Math.random() * 0xfffff * 1000000).toString(16);
+    return '#' + n.slice(0, 6);
+  };
+
+console.log(randomColor(), random_hex_color_code());
+
+//problem 12
+
 let removeBadchar = (str) => {
     if(str == null || str == ' ') return str;
     str = str.toString();
@@ -105,4 +126,68 @@ let removeBadchar = (str) => {
 }
 
 console.log(removeBadchar('äÄçÇéÉêPHP-MySQLöÖÐþúÚ'));
+
+//problem 13
+
+let byteSize = str => {
+    let size = 0;
+    for(let i = 0; i < str.length; i ++){
+        if(str.charCodeAt(i) > 0x80){
+            size ++;
+        }
+        size ++;
+    }
+    return size;
+}
+
+console.log(byteSize("hi"));
+console.log(byteSize("Ã¢"));
+console.log(byteSize("123456"));
+console.log("problem 14 end\n");
+
+//problem 14
+const replaceKey = (keysMap, obj) =>
+  Object.keys(obj).reduce(
+    (acc, key) => ({
+      ...acc,  [keysMap[key] || key]: obj[key]
+    }),
+    {}
+  );
+
+const obj = { name: 'Bobo', job: 'Programmer', shoeSize: 100 };
+let result = replaceKey({ name: 'firstName', job: 'Actor' }, obj);
+console.log(result);
+
+
+//problem 15
+const reduce_Which = (arr, comparator = (a, b) => a - b) =>{
+  return arr.reduce((a, b) => (comparator(a, b) >= 0 ? b : a))
+};
+console.log(reduce_Which([10, 30, 20], (a, b) => a - b));  
+
+
+//problem 16
+
+const all = (arr, fn = Boolean) => arr.every(fn);
+console.log(all([4, -1, 3], x => x > 1)); 
+console.log(all([4, 2, 3], x => x < 1));
+console.log(all([1, 2, 3])); 
+
+
+//problem 17
+
+let split = (arr, fn) => {
+    return arr.reduce((acc, val, idx)=>{
+        if(fn[idx]){
+            acc[0].push(val);
+        }else{
+            acc[1].push(val);
+        }
+        return acc;
+    }, [[],[]]);
+}
+
+console.log(split([1, 2, 3, 4], [true, true, false, true]));
+
+
 
