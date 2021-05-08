@@ -1,0 +1,11 @@
+@import './base/variables.scss';
+
+body{
+    background-color:  $bg;
+    color: $red;
+}
+
+a{
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+}

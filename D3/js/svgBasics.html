@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script src="https://d3js.org/d3.v5.js"></script>
+        </head>
+        <body>
+            <svg style="width: 400;height:400;">
+                <rect x="0" y="0" width="50" height="50" fill="blue"></rect>
+                <circle cx="100" cy="35" r="30" fill="red"></circle>
+                <ellipse cx="200" cy="45" rx="15" ry="20" fill="yellow"></ellipse>
+                <!-- Lines need two pairs of coordinates and a stroke width -->
+                <line x1="185" y1="5" x2="230" y2="40" stroke="blue" stroke-width="1"></line>
+                <!-- Text takes an x/y coordinate and a font size -->
+                <text x="260" y="25" font-size="20px" fill="orange">Hello World</text>
+
+                <path d="M10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80" stroke="black" fill="transparent"/>
+                
+            </svg>
+
+        </body>
+
+
+</html>
